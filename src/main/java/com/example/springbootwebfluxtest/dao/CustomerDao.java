@@ -34,4 +34,10 @@ public class CustomerDao {
                 .doOnNext(System.out::println)
                 .map(i -> new Customer(i, "cutomer " + i));
     }
+
+    public Flux<Customer> getCustomersList() {
+        return Flux.range(1, 50)
+                .doOnNext(System.out::println)
+                .map(i -> new Customer(i, "cutomer " + i));
+    }
 }
